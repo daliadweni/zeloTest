@@ -1,0 +1,280 @@
+object Form1: TForm1
+  Left = 352
+  Height = 650
+  Top = 32
+  Width = 900
+  Caption = 'Zelo'
+  ClientHeight = 650
+  ClientWidth = 900
+  Color = clWindow
+  DesignTimePPI = 120
+  Font.Height = -15
+  Font.Name = 'Segoe UI'
+  Font.Quality = fqCleartype
+  Position = poScreenCenter
+  LCLVersion = '4.0.0.4'
+  OnCreate = FormCreate
+  object pnlTop: TPanel
+    Left = 0
+    Height = 60
+    Top = 0
+    Width = 900
+    Align = alTop
+    BevelOuter = bvNone
+    ClientHeight = 60
+    ClientWidth = 900
+    Color = 2303013
+    Font.Color = clWhite
+    Font.Height = -15
+    Font.Name = 'Segoe UI'
+    Font.Style = [fsBold]
+    ParentBackground = False
+    ParentColor = False
+    ParentFont = False
+    TabOrder = 0
+    object lblAppTitle: TLabel
+      Left = 20
+      Height = 28
+      Top = 16
+      Width = 58
+      Caption = 'ZELO'
+      Font.Color = clWhite
+      Font.Height = -21
+      Font.Name = 'Segoe UI'
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+    end
+    object btnImport: TButton
+      Left = 650
+      Height = 36
+      Top = 12
+      Width = 230
+      Anchors = [akTop, akRight]
+      Caption = 'Datenbank importieren'
+      Color = 4292864
+      Font.Color = clWhite
+      Font.Height = -15
+      Font.Name = 'Segoe UI'
+      ParentFont = False
+      TabOrder = 0
+      OnClick = btnImportClick
+    end
+  end
+  object pnlFilters: TPanel
+    Left = 0
+    Height = 90
+    Top = 60
+    Width = 900
+    Align = alTop
+    BevelOuter = bvNone
+    ClientHeight = 90
+    ClientWidth = 900
+    Color = 15790320
+    ParentBackground = False
+    ParentColor = False
+    TabOrder = 1
+    object lblFilterName: TLabel
+      Left = 16
+      Height = 20
+      Top = 40
+      Width = 41
+      Caption = 'Name:'
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+    end
+    object edtFilterName: TEdit
+      Left = 16
+      Height = 28
+      Top = 60
+      Width = 200
+      BorderSpacing.Around = 2
+      BorderStyle = bsNone
+      Color = clWhite
+      TabOrder = 0
+      OnChange = edtFilterNameChange
+    end
+    object lblFilterTelephone: TLabel
+      Left = 240
+      Height = 20
+      Top = 40
+      Width = 75
+      Caption = 'Telefon:'
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+    end
+    object edtFilterTelephone: TEdit
+      Left = 240
+      Height = 28
+      Top = 60
+      Width = 200
+      BorderSpacing.Around = 2
+      BorderStyle = bsNone
+      Color = clWhite
+      TabOrder = 1
+      OnChange = edtFilterTelephoneChange
+    end
+    object lblFilterPostcode: TLabel
+      Left = 464
+      Height = 20
+      Top = 40
+      Width = 64
+      Caption = 'PLZ:'
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+    end
+    object edtFilterPostcode: TEdit
+      Left = 464
+      Height = 28
+      Top = 60
+      Width = 150
+      BorderSpacing.Around = 2
+      BorderStyle = bsNone
+      Color = clWhite
+      TabOrder = 2
+      OnChange = edtFilterPostcodeChange
+    end
+    object btnClearFilters: TButton
+      Left = 740
+      Height = 30
+      Top = 58
+      Width = 140
+      Caption = 'Filter löschen'
+      Color = 4292864
+      Font.Color = clWhite
+      ParentFont = False
+      TabOrder = 3
+      OnClick = btnClearFiltersClick
+    end
+  end
+  object pnlGrid: TPanel
+    Left = 0
+    Height = 470
+    Top = 150
+    Width = 900
+    Align = alClient
+    BevelOuter = bvNone
+    ClientHeight = 470
+    ClientWidth = 900
+    ParentBackground = False
+    TabOrder = 2
+    object lblDataTitle: TLabel
+      Left = 16
+      Height = 20
+      Top = 5
+      Width = 97
+      Caption = 'Adressdaten'
+      Font.Color = 2303013
+      Font.Height = -15
+      Font.Name = 'Segoe UI'
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+    end
+    object sgAddresses: TStringGrid
+      Left = 16
+      Height = 425
+      Top = 30
+      Width = 868
+      Align = alClient
+      AlternateColor = 15790320
+      BorderSpacing.Left = 16
+      BorderSpacing.Right = 16
+      BorderSpacing.Bottom = 15
+      DefaultColWidth = 120
+      DefaultRowHeight = 34
+      FixedColor = 2303013
+      FixedCols = 0
+      Flat = True
+      Font.Height = -13
+      Font.Name = 'Segoe UI'
+      Font.Quality = fqCleartype
+      GridLineWidth = 0
+      HeaderHotZones = [gzFixedRows]
+      HeaderPushZones = [gzFixedRows]
+      Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goRangeSelect, goColSizing, goRowSelect, goThumbTracking, goSmoothScroll]
+      ParentFont = False
+      TabOrder = 0
+      TitleFont.Color = clWhite
+      TitleFont.Height = -13
+      TitleFont.Name = 'Segoe UI'
+      TitleFont.Quality = fqCleartype
+      TitleFont.Style = [fsBold]
+    end
+  end
+  object pnlStatus: TPanel
+    Left = 0
+    Height = 30
+    Top = 620
+    Width = 900
+    Align = alBottom
+    BevelOuter = bvNone
+    ClientHeight = 30
+    ClientWidth = 900
+    Color = 15790320
+    ParentBackground = False
+    ParentColor = False
+    TabOrder = 3
+    object lblStatus: TLabel
+      Left = 16
+      Height = 20
+      Top = 5
+      Width = 58
+      Caption = 'lblStatus'
+      Font.Color = 2303013
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+    end
+  end
+  object pnlButtons: TPanel
+    Left = 0
+    Height = 50
+    Top = 570
+    Width = 900
+    Align = alBottom
+    BevelOuter = bvNone
+    ClientHeight = 50
+    ClientWidth = 900
+    ParentBackground = False
+    TabOrder = 4
+    object btnEdit: TButton
+      Left = 740
+      Height = 36
+      Top = 7
+      Width = 180
+      Anchors = [akTop, akRight]
+      Caption = 'Auswahl bearbeiten'
+      Color = 4292864
+      Font.Color = clWhite
+      Font.Height = -15
+      Font.Name = 'Segoe UI'
+      ParentFont = False
+      TabOrder = 0
+      OnClick = btnEditClick
+    end
+    object btnDelete: TButton
+      Left = 600
+      Height = 36
+      Top = 7
+      Width = 140
+      Anchors = [akTop, akRight]
+      Caption = 'Auswahl löschen'
+      Color = 6710886
+      Font.Color = clWhite
+      Font.Height = -15
+      Font.Name = 'Segoe UI'
+      ParentFont = False
+      TabOrder = 1
+      OnClick = btnDeleteClick
+    end
+  end
+  object dlgOpen: TOpenDialog
+    Filter = 'CSV Files (*.csv)|*.csv|Excel Files (*.xls;*.xlsx)|*.xls;*.xlsx|All Files (*.*)|*.*'
+    Left = 400
+    Top = 300
+  end
+end
